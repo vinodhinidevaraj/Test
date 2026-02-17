@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Vinodhini | AI & Data Blog</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vinodhini Devaraj | AI & Data Blog</title>
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
-<div class="navbar">
-    <div><strong>Vinodhini Devaraj</strong></div>
-    <div class="nav-links">
+<body class="dark-mode">
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="logo">Vinodhini Devaraj</div>
+    <nav class="nav-links">
         <a href="index.html">Home</a>
         <a href="blog.html">Blog</a>
         <a href="python.html">Python</a>
@@ -16,31 +20,60 @@
         <a href="powerbi.html">Power BI</a>
         <a href="anthropic.html">Anthropic</a>
         <a href="contact.html">Contact</a>
-        <button class="toggle-btn" onclick="toggleDarkMode()">Dark</button>
-    </div>
-</div>
+        <button class="toggle-btn" onclick="toggleDarkMode()">Toggle</button>
+    </nav>
+</header>
 
+<!-- HERO -->
 <section class="hero">
-    <div class="container text-center py-5">
+    <div class="container">
         <h1>Turning Data Into Intelligent Decisions</h1>
-        <p class="lead mt-3">
-            Welcome to my AI & Data Analysis blog where I share Python projects,
-            SQL insights, Power BI dashboards, and my journey into Generative AI.
+        <p>
+            Sharing insights on Python, SQL, Power BI dashboards,
+            and my journey into Generative AI & Anthropic systems.
         </p>
-        <a href="blog.html" class="btn btn-primary mt-3">Explore My Work</a>
+        <a href="blog.html" class="primary-btn">Explore My Work</a>
     </div>
 </section>
 
-<footer class="text-center py-4 mt-5">
-    <p>© 2026 Vinodhini Devaraj</p>
-    <p>
-        <a href="contact.html">Contact</a> |
-        <a href="https://www.linkedin.com/in/vinodhini-devaraj3/" target="_blank">LinkedIn</a>
-    </p>
+<!-- CURRENT LEARNING -->
+<section class="section">
+    <div class="container">
+        <h2>Currently Learning</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Anthropic AI Fluency Course</h3>
+                <p>Deep diving into Generative AI capabilities, limitations, delegation frameworks and AI collaboration.</p>
+            </div>
+            <div class="card">
+                <h3>Advanced Machine Learning</h3>
+                <p>Exploring clustering optimization, model evaluation techniques and scalable ML systems.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter">
+    <div class="container">
+        <h2>Join My Newsletter</h2>
+        <p>Get updates on AI insights, project breakdowns and learning reflections.</p>
+        <input type="email" placeholder="Enter your email">
+        <button>Subscribe</button>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <p>© 2026 Vinodhini Devaraj</p>
+        <p>
+            <a href="contact.html">Contact</a> |
+            <a href="https://www.linkedin.com/in/vinodhini-devaraj3/" target="_blank">LinkedIn</a>
+        </p>
+    </div>
 </footer>
 
 <script src="script.js"></script>
 </body>
 </html>
-
-
