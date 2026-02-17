@@ -1,95 +1,127 @@
-/* Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
 
 body {
     font-family: 'Inter', sans-serif;
     margin: 0;
-    background: #f8f9fc;
-    color: #333;
-    transition: 0.4s ease;
-}
-
-/* Dark Mode */
-body.dark-mode {
     background: #121212;
     color: #f1f1f1;
+    transition: 0.3s ease;
 }
 
-body.dark-mode .card {
-    background: #1e1e1e;
+/* LIGHT MODE */
+body:not(.dark-mode) {
+    background: #f8f9fc;
+    color: #333;
 }
 
-body.dark-mode .navbar {
-    background: #1a1a1a;
+/* CONTAINER */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 20px;
+    text-align: center;
 }
 
-body.dark-mode footer {
-    background: #1a1a1a;
-    color: #ddd;
-}
-
-body.dark-mode footer a {
-    color: #9a8cff;
-}
-
-
-/* Navbar */
+/* NAVBAR */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 8%;
-    background: white;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    padding: 20px 8%;
+    background: #1a1a1a;
     position: sticky;
     top: 0;
-    z-index: 1000;
+}
+
+body:not(.dark-mode) .navbar {
+    background: white;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 18px;
 }
 
 .nav-links a {
-    margin-left: 25px;
+    margin-left: 20px;
     text-decoration: none;
-    color: #555;
+    color: inherit;
     font-weight: 500;
 }
 
 .nav-links a:hover {
-    color: #6c63ff;
+    color: #8c7bff;
 }
 
-/* Hero */
-.hero {
-    background: linear-gradient(135deg, #f3e7ff, #fef6f9);
+.toggle-btn {
+    margin-left: 20px;
+    padding: 6px 14px;
     border-radius: 20px;
-    margin: 30px;
+    border: none;
+    cursor: pointer;
+    background: #8c7bff;
+    color: white;
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(135deg, #1f1f2e, #2a2a40);
+    border-radius: 20px;
+    margin: 40px 8%;
+}
+
+body:not(.dark-mode) .hero {
+    background: linear-gradient(135deg, #f3e7ff, #fef6f9);
 }
 
 .hero h1 {
-    font-size: 48px;
-    font-weight: 700;
+    font-size: 42px;
+    margin-bottom: 20px;
 }
 
 .hero p {
     font-size: 18px;
-    margin-top: 15px;
+    opacity: 0.8;
 }
 
-/* Grid Blog Layout */
+.primary-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #8c7bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+}
+
+/* SECTIONS */
+.section h2 {
+    margin-bottom: 40px;
+}
+
+/* GRID */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
-    padding: 60px 8%;
 }
 
+/* CARD */
 .card {
-    background: white;
+    background: #1e1e1e;
     padding: 25px;
-    border-radius: 14px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-    transition: 0.4s;
+    border-radius: 16px;
+    transition: 0.3s ease;
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(30px);
+}
+
+body:not(.dark-mode) .card {
+    background: white;
 }
 
 .card.show {
@@ -101,32 +133,53 @@ body.dark-mode footer a {
     transform: translateY(-5px);
 }
 
-.toggle-btn {
-    cursor: pointer;
-    border: none;
-    padding: 6px 12px;
-    background: #6c63ff;
-    color: white;
+/* NEWSLETTER */
+.newsletter {
+    background: #1c1c2c;
+    padding: 60px 20px;
+    margin: 60px 8%;
     border-radius: 20px;
+    text-align: center;
 }
 
+body:not(.dark-mode) .newsletter {
+    background: #f3e7ff;
+}
+
+.newsletter input {
+    padding: 12px;
+    border-radius: 25px;
+    border: none;
+    width: 250px;
+    margin-right: 10px;
+}
+
+.newsletter button {
+    padding: 12px 20px;
+    border-radius: 25px;
+    border: none;
+    background: #8c7bff;
+    color: white;
+    cursor: pointer;
+}
+
+/* FOOTER */
 footer {
+    padding: 40px 0;
     text-align: center;
-    padding: 40px;
-    background: #f0f2ff;
     font-size: 14px;
-    color: #555;
+    background: #181818;
+}
+
+body:not(.dark-mode) footer {
+    background: #f0f2ff;
 }
 
 footer a {
+    color: #8c7bff;
     text-decoration: none;
-    color: #6c63ff;
-    font-weight: 500;
 }
 
 footer a:hover {
     text-decoration: underline;
 }
-
-
-
